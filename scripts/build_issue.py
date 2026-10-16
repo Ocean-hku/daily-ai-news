@@ -69,6 +69,12 @@ def load_items() -> list[dict[str, Any]]:
     return items
 
 
+def plain_text(value: Any) -> str:
+    if isinstance(value, list):
+        return "\n".join(str(v).strip() for v in value if str(v).strip())
+    return str(value or "").strip()
+
+
 def validate_issue(issue: dict[str, Any], target: date, existing_items: list[dict[str, Any]]) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -115,6 +121,17 @@ def validate_issue(issue: dict[str, Any], target: date, existing_items: list[dic
             for field in ("title", "body", "url", "source", "event_id", "why"):
                 if not item.get(field):
                     errors.append(f"{prefix}: {field} is required")
+            body_text = plain_text(item.get("body"))
+            why_text = plain_text(item.get("why"))
+            min_body_chars = 320 if level == "main" else 160
+            if len(body_text) < min_body_chars:
+                warnings.append(f"{prefix}: body is short ({len(body_text)} chars); make sure the event is fully explained")
+            if len(why_text) < 36:
+                warnings.append(f"{prefix}: why is too short; explain why the reader should care, not just that it is important")
+            if re.search(r"更值得(看|留意|关注)|重点看的是|不在于.*而在于", why_text + body_text):
+                warnings.append(f"{prefix}: avoid vague 'more worth watching' phrasing unless the causal reason is explicit")
+            if body_text.count("值得") + why_text.count("值得") >= 3:
+                warnings.append(f"{prefix}: repeated '值得' wording; consider rewriting for clarity")
             badge = item.get("badge", "") or ""
             if badge not in ALLOWED_BADGES:
                 errors.append(f"{prefix}: badge must be one of {sorted(ALLOWED_BADGES)}")
@@ -188,10 +205,10 @@ def render_item(item: dict[str, Any]) -> str:
             f"  <article class=\"{item_cls}\">",
             f"    <{tag} class=\"{title_cls}\">{esc(item.get('title'))}{badge_html}</{tag}>",
             f"    <div class=\"meta\">{meta}</div>",
-            f"    <div class=\"why\"><strong>为什么值得读：</strong>{esc(item.get('why'))}</div>",
+            f"    <div class=\"why\"><span class=\"why-label\">读懂这件事</span><span>{esc(item.get('why'))}</span></div>",
             render_paragraphs(item.get("body")),
             render_figure(item),
-            f"    <p>原文：{link_html}</p>",
+            f"    <p class=\"source-line\">原文：{link_html}</p>",
             "  </article>",
         ]
     )
@@ -242,7 +259,7 @@ def validate_html_text(html_text: str, issue: dict[str, Any], target: date) -> t
         f"第 {issue_no:03d} 期",
         "检索截止时间",
         "会影响阅读判断的信息缺口",
-        "为什么值得读",
+        "读懂这件事",
     ]
     if f"昨日 AI 重点资讯 · {target.isoformat()} · 第 {issue_no:03d} 期" not in html_text:
         errors.append("HTML title does not contain date and issue number")

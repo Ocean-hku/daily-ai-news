@@ -2,56 +2,203 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{TITLE}}</title>
 <style>
-  @page { size: A4; margin: 18mm 19mm 18mm 19mm; }
+  @page { size: A4; margin: 12mm 14mm 13mm 14mm; }
+  :root {
+    --paper: #fffdf7;
+    --paper-soft: #fbf5ea;
+    --ink: #25231f;
+    --muted: #6f675d;
+    --faint: #e9decf;
+    --accent: #8f3028;
+    --accent-soft: #f3e3dc;
+    --tag: #efe2cf;
+  }
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: #faf8f4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { color: #2b2b2b; font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", sans-serif; font-size: 11pt; line-height: 1.8; }
-  a { color: #8d2d25; text-decoration: none; border-bottom: 0.5px solid #d7aaa4; }
-  .masthead { text-align: center; padding: 0 0 10px 0; }
-  .masthead h1 { font-family: "SimSun", "Source Han Serif SC", "Songti SC", serif; font-size: 33pt; font-weight: 700; letter-spacing: 0.22em; text-indent: 0.22em; color: #1a1a1a; margin: 0 0 9px 0; line-height: 1.25; }
-  .subline { font-size: 9.5pt; color: #6b6b6b; letter-spacing: 0.08em; margin: 0 0 8px 0; }
-  .rule-double { border-top: 2.5px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; height: 3px; margin: 0 0 4px 0; }
-  .section { margin: 26px 0 0 0; }
-  .section-tag { display: inline-block; background: #b03a2e; color: #fff; font-family: "SimSun", "Source Han Serif SC", serif; font-size: 12.5pt; font-weight: 700; letter-spacing: 0.14em; text-indent: 0.14em; padding: 5px 16px; margin: 0 0 7px 0; break-after: avoid; }
-  .section-lead { font-size: 10pt; color: #6b6b6b; font-style: italic; margin: 0 0 14px 0; padding-left: 2px; break-after: avoid; }
-  .item { margin: 0 0 16px 0; padding: 0 0 14px 0; border-bottom: 0.6px solid #d6d1c6; }
-  .item:last-child { border-bottom: none; }
-  h2.mainhead { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 16pt; font-weight: 700; color: #1a1a1a; line-height: 1.45; margin: 0 0 8px 0; break-after: avoid; }
-  h3.subhead { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 12.5pt; color: #1a1a1a; line-height: 1.5; margin: 0 0 5px 0; break-after: avoid; }
-  .meta { color: #777064; font-size: 9pt; margin: 0 0 7px 0; }
-  .dot { padding: 0 5px; color: #b9b3a8; }
-  p { margin: 0 0 8px 0; text-align: justify; }
-  .why { margin: 8px 0 10px 0; padding: 6px 10px 6px 11px; border-left: 3px solid #b03a2e; background: rgba(176, 58, 46, 0.06); color: #333; font-size: 10pt; break-inside: avoid; }
-  .badge { display: inline-block; vertical-align: 0.12em; margin-left: 7px; padding: 1px 6px; border-radius: 999px; border: 1px solid #b03a2e; color: #b03a2e; font-family: "Microsoft YaHei", sans-serif; font-size: 8.5pt; font-weight: 700; letter-spacing: 0.04em; }
-  figure { margin: 11px 0 12px 0; padding: 9px 10px; border: 0.6px solid #ded8cc; background: #fffdf8; break-inside: avoid; }
+  html { margin: 0; padding: 0; background: #ebe5db; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.86;
+    letter-spacing: 0.01em;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(143, 48, 40, 0.35); }
+  a:hover { border-bottom-color: var(--accent); }
+  .paper {
+    width: min(100%, 960px);
+    margin: 32px auto;
+    padding: 54px 64px 58px;
+    background: var(--paper);
+    border: 1px solid #ded3c3;
+    box-shadow: 0 24px 70px rgba(75, 57, 35, 0.16);
+  }
+  .masthead { text-align: center; padding: 0 0 22px 0; margin-bottom: 20px; border-bottom: 3px double #2a2620; }
+  .masthead h1 {
+    font-family: "SimSun", "Source Han Serif SC", "Songti SC", serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
+    color: #171512;
+    margin: 0 0 12px 0;
+    line-height: 1.18;
+  }
+  .subline { font-size: 14px; color: var(--muted); letter-spacing: 0.05em; margin: 0; }
+  .section { margin: 38px 0 0 0; }
+  .section + .section { padding-top: 28px; border-top: 1px solid var(--faint); }
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 5px 14px 6px;
+    border-radius: 999px;
+    break-after: avoid;
+  }
+  .section-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #f7d7c8; }
+  .section-lead {
+    margin: 12px 0 20px 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+    break-after: avoid;
+  }
+  .item { margin: 0 0 24px 0; padding: 0 0 22px 0; border-bottom: 1px solid var(--faint); }
+  .item:last-child { border-bottom: none; margin-bottom: 0; }
+  .main-item {
+    margin-top: 12px;
+    padding: 24px 26px 22px;
+    background: var(--paper-soft);
+    border: 1px solid #eadfce;
+    border-radius: 18px;
+  }
+  h2.mainhead,
+  h3.subhead {
+    font-family: "SimSun", "Source Han Serif SC", "Songti SC", serif;
+    color: #181613;
+    font-weight: 700;
+    break-after: avoid;
+  }
+  h2.mainhead { font-size: 27px; line-height: 1.42; margin: 0 0 10px 0; }
+  h3.subhead { font-size: 22px; line-height: 1.48; margin: 0 0 8px 0; }
+  .meta { color: #7d756b; font-size: 14px; margin: 0 0 13px 0; }
+  .dot { padding: 0 7px; color: #b8aa99; }
+  p { margin: 0 0 14px 0; text-align: justify; }
+  p:last-child { margin-bottom: 0; }
+  .why {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 10px;
+    align-items: start;
+    margin: 14px 0 17px 0;
+    padding: 12px 14px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    color: #342b27;
+    font-size: 16px;
+    line-height: 1.72;
+    break-inside: avoid;
+  }
+  .why-label {
+    display: inline-block;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 1px 9px 2px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+  .badge {
+    display: inline-block;
+    vertical-align: 0.12em;
+    margin-left: 8px;
+    padding: 2px 8px 3px;
+    border-radius: 999px;
+    background: #fff3ec;
+    border: 1px solid #c75a45;
+    color: #9e3529;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  figure { margin: 18px 0; padding: 13px 14px; border: 1px solid var(--faint); border-radius: 14px; background: #fffaf0; break-inside: avoid; }
   figure svg { display: block; width: 100%; height: auto; }
-  figcaption { margin-top: 6px; color: #6b6b6b; font-size: 8.8pt; text-align: center; }
-  .footer { margin-top: 28px; padding-top: 11px; border-top: 1px solid #cfc8bd; color: #5f5a52; font-size: 9pt; }
-  .footer h4 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 11pt; margin: 0 0 5px 0; color: #1a1a1a; }
-  .footer ul { margin: 4px 0 0 18px; padding: 0; }
-  .footer li { margin: 0 0 3px 0; }
-  .print-mark { text-align: center; color: #6b6b6b; font-size: 8.5pt; letter-spacing: 1px; border-top: 0.5px solid #ddd7cb; padding-top: 8px; margin-top: 12px; }
+  figcaption { margin-top: 8px; color: var(--muted); font-size: 13px; text-align: center; }
+  .source-line {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px dashed #dfd1c0;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: left;
+  }
+  .footer { margin-top: 44px; padding-top: 18px; border-top: 2px solid #d8cab8; color: #625a50; font-size: 14px; }
+  .footer h4 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 18px; margin: 16px 0 6px 0; color: #1b1814; }
+  .footer h4:first-child { margin-top: 0; }
+  .footer ul { margin: 6px 0 0 20px; padding: 0; }
+  .footer li { margin: 0 0 5px 0; }
+  .print-mark { text-align: center; color: #766d62; font-size: 13px; letter-spacing: 0.08em; border-top: 1px solid #e1d5c5; padding-top: 12px; margin-top: 18px; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; line-height: 1.82; }
+    .paper { margin: 0; padding: 28px 20px 36px; border: none; box-shadow: none; }
+    .masthead h1 { font-size: 32px; letter-spacing: 0.12em; text-indent: 0.12em; }
+    h2.mainhead { font-size: 24px; }
+    h3.subhead { font-size: 20px; }
+    .main-item { padding: 20px 18px; border-radius: 14px; }
+    .why { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    html, body { background: var(--paper); }
+    body { font-size: 11.5pt; line-height: 1.78; }
+    .paper { width: auto; margin: 0; padding: 0; border: none; box-shadow: none; background: transparent; }
+    .masthead { padding-bottom: 10mm; margin-bottom: 7mm; }
+    .masthead h1 { font-size: 29pt; }
+    .subline { font-size: 9.2pt; }
+    .section { margin-top: 9mm; }
+    .section + .section { padding-top: 7mm; }
+    .section-lead { font-size: 10.5pt; }
+    h2.mainhead { font-size: 17.5pt; }
+    h3.subhead { font-size: 14.2pt; }
+    .main-item { padding: 6mm 7mm; border-radius: 4mm; }
+    .meta, .source-line, .footer, .print-mark { font-size: 9pt; }
+    .why { font-size: 10.3pt; padding: 3mm 3.5mm; }
+    p { margin-bottom: 3.4mm; }
+  }
 </style>
 </head>
 <body>
-<header class="masthead">
-  <h1>昨日 AI 重点资讯</h1>
-  <div class="subline">{{SUBLINE}}</div>
-  <div class="rule-double"></div>
-</header>
+<main class="paper">
+  <header class="masthead">
+    <h1>昨日 AI 重点资讯</h1>
+    <div class="subline">{{SUBLINE}}</div>
+  </header>
 
 {{SECTIONS}}
 
-<footer class="footer">
-  <h4>检索截止时间</h4>
-  <p>{{DEADLINE}}</p>
-  <h4>会影响阅读判断的信息缺口</h4>
-  <ul>
+  <footer class="footer">
+    <h4>检索截止时间</h4>
+    <p>{{DEADLINE}}</p>
+    <h4>会影响阅读判断的信息缺口</h4>
+    <ul>
 {{GAPS}}
-  </ul>
-  <div class="print-mark">昨日 AI 重点资讯 · 第 {{ISSUE_ZH}} 期 · {{DATE_ZH}}</div>
-</footer>
+    </ul>
+    <div class="print-mark">昨日 AI 重点资讯 · 第 {{ISSUE_ZH}} 期 · {{DATE_ZH}}</div>
+  </footer>
+</main>
 </body>
 </html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>昨日 AI 重点资讯 · 2026-10-15 · 第 002 期</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 19mm 18mm 19mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #faf8f4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", sans-serif;
+    font-size: 11pt;
+    line-height: 1.8;
+    color: #2b2b2b;
+    background: #faf8f4;
+  }
+
+  /* ============ 报头 ============ */
+  .masthead {
+    text-align: center;
+    padding-top: 2mm;
+    border-top: 2.5px solid #1a1a1a;
+  }
+  .masthead h1 {
+    font-family: "SimSun", "Source Han Serif SC", "Songti SC", serif;
+    font-size: 30pt;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin: 5mm 0 3mm 0;
+    color: #1a1a1a;
+  }
+  .masthead .subline {
+    font-size: 9pt;
+    letter-spacing: 1.5px;
+    color: #6b6b6b;
+    margin-bottom: 3mm;
+    font-family: "SimSun", "Source Han Serif SC", serif;
+  }
+  .masthead .rule-bottom {
+    border-bottom: 1px solid #1a1a1a;
+    height: 0;
+    margin-bottom: 1.5mm;
+  }
+  .masthead .rule-thin {
+    border-bottom: 0.6px solid #b9b3a8;
+    height: 0;
+    margin-bottom: 7mm;
+  }
+
+  /* ============ 栏目 ============ */
+  .section { margin-bottom: 6mm; break-inside: auto; }
+
+  .sec-head {
+    background: #b03a2e;
+    color: #ffffff;
+    display: inline-block;
+    padding: 2.2mm 6mm 2.2mm 6mm;
+    font-family: "SimSun", "Source Han Serif SC", serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .sec-intro {
+    font-size: 9.5pt;
+    color: #6b6b6b;
+    font-style: italic;
+    margin: 2mm 0 5mm 0;
+    padding-left: 1mm;
+    break-after: avoid;
+  }
+
+  /* ============ 主条 ============ */
+  .main-item {
+    break-inside: auto;
+    margin-bottom: 7mm;
+  }
+  .main-item h2 {
+    font-family: "SimSun", "Source Han Serif SC", serif;
+    font-size: 16pt;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #1a1a1a;
+    margin: 0 0 2.5mm 0;
+    letter-spacing: 0.5px;
+    break-after: avoid;
+  }
+  .main-item .meta {
+    font-size: 8.5pt;
+    color: #6b6b6b;
+    margin-bottom: 3mm;
+    letter-spacing: 0.3px;
+    break-after: avoid;
+  }
+  .main-item .meta span { margin-right: 4mm; }
+  .main-item p {
+    text-align: justify;
+    margin: 0 0 3mm 0;
+    text-indent: 2em;
+  }
+  .main-item p.noindent { text-indent: 0; }
+
+  /* ============ 徽章 ============ */
+  .badge {
+    display: inline-block;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.6mm 2.2mm 0.6mm 2.2mm;
+    vertical-align: middle;
+    margin-left: 2mm;
+    font-family: "Microsoft YaHei", sans-serif;
+    white-space: nowrap;
+  }
+  .badge-hot { background: #b03a2e; color: #fff; }
+  .badge-upd { background: #ffffff; color: #b03a2e; border: 1px solid #b03a2e; }
+
+  /* ============ 为什么值得读 ============ */
+  .whyread {
+    border-left: 3px solid #b03a2e;
+    background: rgba(176, 58, 46, 0.05);
+    padding: 2.5mm 3.5mm 2.5mm 4mm;
+    margin: 3.5mm 0 3.5mm 0;
+    font-size: 10pt;
+    line-height: 1.65;
+    color: #2b2b2b;
+    break-inside: avoid;
+  }
+  .whyread b {
+    color: #b03a2e;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* ============ 副条 ============ */
+  .sub-item {
+    border-top: 0.6px solid #c9c3b6;
+    padding: 4mm 0 0.5mm 0;
+    margin-top: 4mm;
+    break-inside: avoid;
+  }
+  .sub-item h3 {
+    font-family: "SimSun", "Source Han Serif SC", serif;
+    font-size: 12pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1.8mm 0;
+    line-height: 1.5;
+    break-after: avoid;
+  }
+  .sub-item .meta {
+    font-size: 8.5pt;
+    color: #6b6b6b;
+    margin-bottom: 2.2mm;
+    break-after: avoid;
+  }
+  .sub-item .meta span { margin-right: 4mm; }
+  .sub-item p {
+    font-size: 10pt;
+    line-height: 1.72;
+    text-align: justify;
+    margin: 0 0 2mm 0;
+    text-indent: 2em;
+  }
+  .sub-item p.noindent { text-indent: 0; }
+
+  /* ============ 链接行 ============ */
+  .srcline {
+    font-size: 9pt;
+    color: #6b6b6b;
+    margin-top: 2mm;
+    text-indent: 0;
+  }
+  .srcline b { color: #1a1a1a; font-weight: 700; }
+  a { color: #b03a2e; text-decoration: none; border-bottom: 0.5px dotted #b03a2e; }
+
+  /* ============ 图表 ============ */
+  figure {
+    margin: 4.5mm 0 4.5mm 0;
+    break-inside: avoid;
+    text-align: center;
+  }
+  figure svg { max-width: 100%; height: auto; }
+  figcaption {
+    font-size: 9pt;
+    color: #6b6b6b;
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 2mm;
+    padding-left: 1mm;
+    border-top: 0.5px solid #ddd7cb;
+    padding-top: 2mm;
+  }
+  figcaption b { color: #b03a2e; }
+
+  /* ============ 页脚 ============ */
+  .footer {
+    border-top: 1.5px solid #1a1a1a;
+    margin-top: 6mm;
+    padding-top: 4mm;
+    font-size: 8.8pt;
+    color: #6b6b6b;
+    line-height: 1.7;
+    break-inside: avoid;
+  }
+  .footer h4 {
+    font-family: "SimSun", "Source Han Serif SC", serif;
+    font-size: 10pt;
+    color: #1a1a1a;
+    margin: 0 0 2mm 0;
+    letter-spacing: 2px;
+  }
+  .footer ul { margin: 0 0 3mm 0; padding-left: 5mm; }
+  .footer li { margin-bottom: 1.2mm; }
+</style>
+</head>
+<body>
+
+<!-- ==================== 报头 ==================== -->
+<div class="masthead">
+  <h1>昨日 AI 重点资讯</h1>
+  <div class="subline">二〇二六年十月十五日 · 星期四 · 第 002 期 · 收录窗口：10 月 14 日（含 13 日晚间）</div>
+  <div class="rule-bottom"></div>
+  <div class="rule-thin"></div>
+</div>
+
+<!-- ==================== 政策与产业 ==================== -->
+<div class="section">
+  <div class="sec-head">政策与产业</div>
+  <div class="sec-intro">两条消息都跟「关不掉」有关——一个是关不掉的模型，一个是关不掉的人。</div>
+
+  <div class="main-item">
+    <h2>小模型可能很快就会自己「搬家」：Anthropic 红队给了一张粗糙的时间表</h2>
+    <div class="meta"><span>语言：英</span><span>阅读时间：约 5 分钟</span><span>爆火时点：10 月 14 日多家媒体同日跟进</span><span>事件时点：10 月 12 日发布</span></div>
+
+    <p>如果你家吃灰的那个安卓电视盒子，有一天会自己变成别人的算力，会怎样？Anthropic 的前沿红队（Frontier Red Team，一个专门测试模型危险能力的内部小组）10 月 12 日发了一份研究，10 月 14 日被 SecurityWeek、Scripps News 等多家媒体同时跟进，把这个问题从安全圈推到了大众面前。</p>
+
+    <p>研究做了三件事。第一，他们买了 15 台杂牌安卓电视盒子，每台约 55 美元、4GB 内存，把一个 260 亿参数的开源模型拆开塞进去跑——跑得极慢，每秒 0.39 个 token，但确实跑起来了。第二，他们让一个 90 亿参数的小模型在 9 种从开发板到 Mac 的陌生硬件上自己把推理环境搭起来，成功了 8 种。第三，他们在一个带防火墙的云网络里放了 8 台安卓模拟器，把一个「AI 蠕虫」丢在其中一台上：在测过的开源权重模型里，只有 GLM-5.2 完整跑通了「找到下一台机器—复制过去—装好推理服务—继续找下一台」的全套动作，五次试验里有四次拿下全部 8 台。</p>
+
+    <p>最值得注意的是一条代际学习曲线：当后一代的 Qwen3.5-9B 能读到前一代留下的笔记时，把推理环境搭起来的成功率从第一代的 45% 涨到了后来的 61%—84%。换句话说，这个链条自己会变强。</p>
+
+    <figure>
+      <svg viewBox="0 0 660 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI 蠕虫代际成功率条形图">
+        <text x="0" y="16" font-family="SimSun, serif" font-size="13" fill="#1a1a1a" font-weight="700">同一套动作，做第二遍就变熟了</text>
+        <text x="0" y="34" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#6b6b6b">Qwen3.5-9B 在陌生硬件上搭起推理环境的成功率</text>
+        <!-- bars -->
+        <text x="0" y="70" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b">第一代（无笔记）</text>
+        <rect x="150" y="58" width="225" height="16" fill="#2b2b2b"/>
+        <text x="385" y="71" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#2b2b2b" font-weight="700">45%</text>
+        <text x="0" y="102" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b">后续代际（下限）</text>
+        <rect x="150" y="90" width="305" height="16" fill="#b03a2e"/>
+        <text x="465" y="103" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#b03a2e" font-weight="700">61%</text>
+        <text x="0" y="134" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b">后续代际（上限）</text>
+        <rect x="150" y="122" width="420" height="16" fill="#b03a2e"/>
+        <text x="580" y="135" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#b03a2e" font-weight="700">84%</text>
+        <!-- baseline -->
+        <line x1="150" y1="152" x2="620" y2="152" stroke="#c9c3b6" stroke-width="0.8"/>
+        <text x="150" y="166" font-family="Microsoft YaHei, sans-serif" font-size="9" fill="#6b6b6b">0</text>
+        <text x="596" y="166" font-family="Microsoft YaHei, sans-serif" font-size="9" fill="#6b6b6b">100%</text>
+      </svg>
+      <figcaption><b>该看什么：</b>45% 到 84% 的那一截。普通蠕虫每一代都一样笨，而这个链条会把上一代踩过的坑写给下一代——这是「AI 蠕虫」和传统僵尸网络真正的区别。数据来自 Anthropic 自家实验，尚无独立复现。</figcaption>
+    </figure>
+
+    <p>但边界必须说清楚。Anthropic 自己强调三点：一，「我们还没有一个完整的失控复制体」；二，试验里入侵那一步被刻意做成无认证的调试端口，所以这是「真实世界成功率的上限」，不是预测；三，「年底小模型能追上 GLM-5.2」这个判断来自一条趋势线外推，而那条线用的是通用能力指数，不是复制能力测试。批评者（比如 Gregory Kurtzer）认为整个实验是被设计成必然成功的。</p>
+
+    <p>防御建议倒不新鲜：运营商能在流量层面看见几个 GB 的模型文件往电视盒子里灌；厂商别再用默认密码——英国已经立法禁止默认密码了。真正值得读者记住的可能是最后一句：社会应该一边加固系统，一边准备「和它们长期共存的世界」。笔者认为，发布时点本身也是信号：它落在英国 AI 大臣说「AI 驱动的国防入侵可能不可避免」的同一周，也落在顶尖 AI 高管签署白宫自律承诺的两周后。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>重点看那条 45%→84% 的曲线，其余数字都可以打折扣。它说明真正的风险不是「模型会写蠕虫」，而是「蠕虫会积累经验」。</div>
+
+    <p class="srcline"><b>原文：</b><a href="https://securityweek.com/small-ai-models-may-soon-be-able-to-self-replicate-on-iot-devices-anthropic-warns">SecurityWeek</a> · <a href="https://www.aol.com/articles/ai-could-soon-spread-cheap-213015000.html">Scripps News（AOL 转载）</a> · <a href="https://artificialwatch.com/wire/anthropic-small-models-self-replicate-iot">artificialwatch 技术梳理</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>OpenAI 办公室里被搜出录音设备，一名前员工被 FBI 逮捕</h3>
+    <div class="meta"><span>语言：英</span><span>约 1 分钟</span><span>爆火时点：10 月 13—14 日</span></div>
+    <p>OpenAI 在 X 上说，公司在一间办公室里发现了一个隐藏的录音装置，随后用自家模型分析来源，确认是一名员工几天前安装的。该员工被解雇并移交 FBI，FBI 已实施逮捕，调查仍在进行。OpenAI 称目前没有证据显示此人不当访问或外泄了模型权重（官方口径）。</p>
+    <p>这件事本身没有技术含量，但它把「AI 公司的内部安全」这个抽象议题换成了具体的办公室场景。叠加近期多起员工与监管摩擦的报道，值得注意的是这家公司正在同时处理对外和对内两条安全线——而两条线上的通报，都越来越频繁地由公司自己发布，而不是由监管方发布。</p>
+    <p class="srcline"><b>原文：</b><a href="https://www.marketscreener.com/news/fbi-arrests-former-openai-employee-for-planting-listening-device-ce785dd2d98bf526">路透社报道</a> · OpenAI 官方 X 帖文</p>
+  </div>
+</div>
+
+<!-- ==================== 大模型与 AI 产品进展 ==================== -->
+<div class="section">
+  <div class="sec-head">大模型与 AI 产品进展</div>
+  <div class="sec-intro">前沿模型的发布会已经没什么可比的了——今天真正的新闻在价格标签上，在「改了哪些公开仓库」上。</div>
+
+  <div class="main-item">
+    <h2>Gemini 4 Argon 全面上线：谷歌这次不比跑分，比「能不能把活干完」</h2>
+    <div class="meta"><span>语言：英</span><span>约 4 分钟</span><span>爆火时点：10 月 14 日全球刷屏</span><span>事件时点：10 月 13 日发布</span></div>
+
+    <p>10 月 13 日发布、14 日全面铺开，Gemini 4 Argon 是这几天最不像「发布会」的发布会：谷歌几乎没有谈参数规模，整篇官方博客在讲它帮 Chrome 团队干了多少活。</p>
+
+    <p>先说能用的部分。Argon 通过 Gemini API、AI Studio、Google Antigravity 开放给开发者和企业，Gemini App 与搜索里的 AI 模式向订阅用户开放。上下文窗口是 100 万 token（输入输出合并计算）。价格是这次的重点：每百万输入 token 2 美元、输出 10 美元，缓存输入打 95% 折——注意这是「引入价」，11 月 30 日之后涨到 4 美元和 20 美元。第三方 Artificial Analysis 的测算称其智能指数与 GPT-6 Astra 持平，而单任务成本比对方低约四成。</p>
+
+    <p>再说有意思的部分。谷歌把 Argon 用在自己的工程问题上：帮 Chrome 团队把核心网页处理逻辑，从 Chromium 4000 万行代码库里一个 600 万行的历史遗留文件夹中剥离出来，横跨数百个文件的架构重构，从几个月压到几周；给开源的 Agent Development Kit 做了一夜自主优化，把长会话的内存准备时间砍掉 40%；把量子化学包 xTB 的分子结构预测做快了 2.3 倍。这些是厂商自述数据，但有一条比其他都实在——这些改动是合进了公开仓库的，可以自己去看 commit。</p>
+
+    <p>笔者认为，真正值得注意的是叙事的转向。一年前的前沿模型发布都在讲「我们考了多少分」，这次讲的是「我们把哪个产品的哪段代码改快了多少」。当四家实验室都能做出能力相近的前沿 agent，厂商就只能去比成本、比能不能过安全评审、比配套做得多厚。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>跳过 Vals Index 那个第一名。去看它改了哪些公开仓库——那是整篇发布稿里唯一能自己验证的部分，也是判断「这次到底有没有泡沫」的最快方法。</div>
+
+    <p class="srcline"><b>原文：</b><a href="https://deepmind.google/blog/introducing-gemini-4-argon/">Google DeepMind 官方博客</a> · <a href="https://www.gadgets360.com/ai/news/google-gemini-4-argon-ai-model-rollout-pricing-features-12179927">Gadgets 360（价格与渠道）</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>开源权重阵营在同一天集体补位：都不拼能力上限，拼单位成本</h3>
+    <div class="meta"><span>语言：中／英</span><span>约 2 分钟</span><span>事件时点：10 月 13—14 日</span></div>
+    <p>同一天几家同时出手。智谱 GLM-5.3-Highspeed 免费开放，100 万 token 上下文、最大输出 13 万 token，输入输出缓存全免；面壁智能联合 OpenBMB 开源 MiniCPM-V 4.7（35B-A3B 与 1B 两个版本），称是全球首个能在端侧无损流畅运行的开源 MoE 多模态模型；Liquid AI 的 LFM2.5-24B-A2B 把上下文从 32K 拉到 131K、词表翻倍到 128K，总参数 24B 但每 token 只激活约 2B；腾讯优图开源 5B 的全模态解析模型 Youtu-Parsing-Omni，文档、图像、图表、音视频统一输出结构化 JSON；Mistral 的 Le Chonk 则自称「中国之外最强的开放权重模型」。</p>
+    <p>共同点是都不在拼绝对能力，而在拼「同样的钱能买到多少能力」。跑分多为厂商口径，未见独立复现。</p>
+    <p class="srcline"><b>来源：</b><a href="https://damodev.csdn.net/6acf68fd536f457592afdf5c.html">DAMO 开发者矩阵日报（汇总）</a> · 各家官方发布</p>
+  </div>
+</div>
+
+<!-- ==================== 实用 AI 用法 ==================== -->
+<div class="section">
+  <div class="sec-head">实用 AI 用法</div>
+  <div class="sec-intro">写代码已经不是瓶颈了。卡住的，是写完之后那几个环节。</div>
+
+  <div class="main-item">
+    <h2>Anthropic 把 git 换掉了：日均三万次合并之后，版本控制先扛不住</h2>
+    <div class="meta"><span>语言：英</span><span>约 5 分钟</span><span>爆火时点：10 月 13—14 日</span></div>
+
+    <p>过去四个月，Anthropic 内部合并进主分支的代码变更，从 5 月的每天约 2,500 次涨到 9 月的超过 30,000 次。这不是招了更多人，是 Claude 在写、在测、在合。真正被压垮的不是程序员，是基础设施——主分支历史接近 100 GB，压缩后的工作副本超过 25 GB，CI 每天要做大约 2,500 万次代码检出。</p>
+
+    <figure>
+      <svg viewBox="0 0 660 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anthropic 日均代码合并量对比图">
+        <text x="0" y="16" font-family="SimSun, serif" font-size="13" fill="#1a1a1a" font-weight="700">四个月，十二倍</text>
+        <text x="0" y="34" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#6b6b6b">Anthropic 单日合并进主分支的变更数（官方口径）</text>
+        <text x="0" y="68" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b">2026 年 5 月</text>
+        <rect x="150" y="56" width="40" height="18" fill="#2b2b2b"/>
+        <text x="200" y="71" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#2b2b2b" font-weight="700">约 2,500 次／天</text>
+        <text x="0" y="106" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b">2026 年 9 月</text>
+        <rect x="150" y="92" width="480" height="18" fill="#b03a2e"/>
+        <text x="150" y="128" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#b03a2e" font-weight="700">超过 30,000 次／天</text>
+        <text x="0" y="144" font-family="Microsoft YaHei, sans-serif" font-size="9" fill="#6b6b6b">同一时期：主分支历史接近 100 GB，CI 每日约 2,500 万次检出</text>
+      </svg>
+      <figcaption><b>该看什么：</b>纵轴不是人数。同一个团队、四个月、十二倍，增量来自 agent。这条曲线往上走的时候，最先报警的通常不是代码质量，而是评审、合并和回滚的吞吐。</figcaption>
+    </figure>
+
+    <p>于是七个人的团队用五个月时间（大量借助 Claude 自己）写了一个叫 Scion 的版本控制系统，把整个 monorepo 从 git 迁了过去。</p>
+
+    <p>Scion 的设计前提非常直白：git 假定客户端是人类开发者——会 clone 一份完整仓库、离线工作几小时、再 push。而 Anthropic 的主要「开发者」是永远在线、不需要本地持久化、也受不了几秒钟检出延迟的 agent。所以 Scion 反过来做成了严格的客户端—服务器结构：客户端只是个薄壳，blame（查某一行是谁改的）、rebase、merge、历史查询全在服务器端做；提交的最小单位不再是带完整树指针的 commit，而是写进预写日志的一条「变更集」，只记录相对父节点改了哪些文件——packfile（git 用来打包压缩历史对象的格式）被整个取消掉了。副作用是基础设施的 CPU 和内存占用比原来的 git 镜像方案小了约 200 倍，CI 检出从几分钟变成几秒。</p>
+
+    <p>Anthropic 明说 Scion 不是要给所有人替代 git，只是公开设计思路。但笔者认为这篇更像是行业第一份「agent 规模」的基础设施体检报告：当代码几乎免费，瓶颈就会整齐地移动到评审、合并和回滚上——上周那份「代码量涨了、软件没多」的研究，说的是同一件事的另一面。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>如果你所在的团队也开始让 agent 提交代码，重点看「为什么 git 会先扛不住」那一节。那是一份写给所有人的预警，只是包装成了 Anthropic 的内部工程复盘。</div>
+
+    <p class="srcline"><b>原文：</b>Anthropic 工程博客（本次未直接取回原页）<br><b>可核验转述：</b><a href="https://extrapolator.ai/2026/10/13/anthropic-replaces-git-with-scion-as-agent-commits-hit-30k-per-day">Extrapolator AI 架构解读</a> · <a href="https://sitem.co/public/summary/4570/scaling-source-control-for-ai-generated-code-how-anthropic-built-scion">SiteM 摘要</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>GitHub 10/14 趋势榜：agent 工具链开始「接管整个终端」</h3>
+    <div class="meta"><span>语言：英</span><span>约 2 分钟</span><span>证据：日榜第一 + 单日新增约 4.3 万星</span></div>
+    <p>10 月 14 日 GitHub 日榜第一是 <code>morluto/rea</code>——「用 agent 逆向工程任何东西，从应用行为一路到原生二进制」，两天累计超过 22 万星；配套上榜的还有 <code>vercel-labs/skills</code>（一条 <code>npx skills add</code> 把同一个技能装进 75 个以上不同 agent，把技能安装做成了 npm 的体验）和 <code>debpalash/VoiceStudio</code>（全本地运行的语音工作台：克隆、声音设计、配音、转写、有声书，README 自称支持 646 种语言，AGPL-3.0，约 5GB 磁盘）。</p>
+    <p>有意思的是 rea 的热度刚好接在 Anthropic 那篇「GLM-5.2 能自我复制」之后——同一类能力，一边被写成安全研究，一边被做成生产力工具。这个对照本身就值得琢磨。</p>
+    <p class="srcline"><b>原文：</b><a href="https://github.com/morluto/rea">morluto/rea</a> · <a href="https://github.com/vercel-labs/skills">vercel-labs/skills</a> · <a href="https://github.com/debpalash/VoiceStudio">debpalash/VoiceStudio</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>Clojure 之父说「AI 不是工具」，Hacker News 吵了 530 条</h3>
+    <div class="meta"><span>语言：英</span><span>约 2 分钟</span><span>证据：HN 530+ 评论、多平台转载</span><span>事件时点：10 月 14 日</span></div>
+    <p>10 月 14 日，Clojure 语言发明人 Rich Hickey 发文《「AI」不是工具》，同一天创业者 Huahai 发文《AI 是工具，用好它需要技能》回击，两篇在 Hacker News 上引出 530 多条评论。</p>
+    <p>Hickey 的核心论证是：工具是你握在手里、随时能改方向的东西，而你对 LLM 说「帮我写个登录页」，更像是开车进得来速窗口点餐——代码里用了什么库、留了什么坑，你按回车之前不知道。他还补了一刀：那些「怎么哄 Claude 不拒绝你」的技巧，一次模型更新就可能全部作废，而开车这种技能是一辈子的。Huahai 的反驳是「不可预测不等于不是工具，工具既能放大好判断也能放大坏判断」。</p>
+    <p>这场争论对具体操作没什么用，但它把「我在用 AI，还是在被 AI 用」这个问题说得比大多数文章都清楚。顺带一提，同期 HN 上还有一条 Rust 语言设计者 Niko Matsakis 的文章，讨论「语言该改成什么样，agent 才能更可靠地写它」——那是从另一侧回应同一个问题。</p>
+    <p class="srcline"><b>中文梳理：</b><a href="https://www.jdon.com/95257-ai-tool-or-not-hickey-huahai-debate.html">极道 Jdon</a> · <b>原帖：</b>Hacker News（10 月 14 日）</p>
+  </div>
+</div>
+
+<!-- ==================== 新鲜 AI 玩法 ==================== -->
+<div class="section">
+  <div class="sec-head">新鲜 AI 玩法</div>
+  <div class="sec-intro">一个根本不会「看」视频的模型，正在变成最会拍视频的那个。</div>
+
+  <div class="main-item">
+    <h2>Vibe Video：Opus 5.5 一帧画面都没生成，却拍出了一部微电影</h2>
+    <div class="meta"><span>语言：中／英</span><span>约 5 分钟</span><span>证据：标杆案例帖浏览超 2,000 万、GitHub 集合站收录 400+ 作品</span><span>爆火时点：10 月 13—14 日</span></div>
+
+    <p>X 上一位叫 @anabology 的博主做了件很偷懒的事：给 Opus 5.5 写了一段参考提示词、一份情绪板，再开个调用 Midjourney 的权限，然后去睡觉了。12 小时后，他拿到一部风格统一的反乌托邦短片。</p>
+
+    <p>情绪板（moodboard）是影视、广告行业的老东西，简单说就是一组参考图加几句关键词，用来提前定死整部片的色调、光影和质感——导演拿着它去跟美术、摄影沟通，大家就不会各画各的。到了 Opus 5.5 这里，情绪板相当于主提示词：它告诉图像模型该出什么，图像模型再对照情绪板出图，所以几百张图出来人物和风格都不跑偏。</p>
+
+    <p>关键在于：Opus 5.5 一帧画面都没「生成」过。它当的是导演——研究提示词、写分镜、设计每一帧的动态，最底下的关键帧交给 Midjourney 出图，最后用代码把片子串起来。这套做法被叫做「编排式混合制作」。更极端的一类则完全不碰图像模型：有创作者让 Opus 5.5 基于 Remotion 框架写了约 7,400 行前端代码，用 SVG、Canvas、Three.js 定义所有视觉元素和运动轨迹，在无头浏览器里跑起来逐帧录制，FFmpeg 合成 MP4，一小时出一支三分钟的 AI 发展史视频。视频的数学本质其实就是「给定时间点，算出这一帧」——这对擅长写代码的模型来说是主场。</p>
+
+    <p>马斯克连续几天转发这类作品，并给一条「Opus 5.5 已达 AGI 80%—90%」的帖子回复「Accurate」。笔者认为这个数字没有任何可核验口径，不值得引用；但传播效果是真实的——澎湃新闻 10 月 14 日的报道提到，另一位博主只用一句指令做出的 2 分 16 秒西方文明史短片，两天播放破千万，全程未调用任何专业视频生成模型。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>重点学「情绪板当主提示词」这个技巧，它是几百张图不跑偏的原因；其次看 GitHub 上那个集合站，400 多条作品每条都附原始提示词和代码，相当于把方法论直接开源了。想自己试，从抄提示词开始最快。</div>
+
+    <p class="srcline"><b>报道：</b><a href="https://www.thepaper.cn/newsDetail_forward_34207738">澎湃新闻</a> · <b>可复现素材：</b>GitHub 上的 awesome-opus5-5-videos 集合站</p>
+  </div>
+
+  <div class="sub-item">
+    <h3>「黄仁勋世界巡演」：一段 86 秒的 AI 二创，从国内火到马斯克评论区</h3>
+    <div class="meta"><span>语言：中</span><span>约 1 分钟</span><span>证据：多家媒体跟进 + 模板化模仿潮</span><span>爆火时点：10 月 14 日报道</span></div>
+    <p>10 月 14 日《华西都市报》报道，一段 86 秒的 AI 视频在国内短视频平台爆了并被搬运到海外：黄仁勋穿黑皮夹克跳上舞台开演唱会，台下「观众」是库克、马斯克、比尔·盖茨，盖茨还因「看演唱会太激动」被担架抬走。马斯克本人评论：「这就是 RAM 这么贵的原因。」</p>
+    <p>更值得留意的是它引发的模板化模仿潮——门捷列夫、曹操、李白、孙悟空都开了「世界巡演」，台下都有相关角色被抬走，单条播放从几万到数百万。据报道拆解，只需一张照片加一段视频素材，零基础两分钟就能做一场。律师提示这类二创的侵权风险：名人形象、音乐素材、原创片段，三方都在灰色地带。</p>
+    <p class="srcline"><b>原文：</b><a href="https://www.163.com/dy/article/L95QG2G50514TQ42.html">华西都市报 · 封面新闻</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>Fish Audio Drama 3：开源权重的语音模型，第一次在「念对字」上赢了闭源</h3>
+    <div class="meta"><span>语言：英</span><span>约 2 分钟</span><span>证据：第三方榜单第一 + 多家独立报道</span><span>事件时点：10 月 13 日发布</span></div>
+    <p>10 月 13 日发布、14 日冲榜的 Fish Audio Drama 3 Preview，在 Artificial Analysis 的 Pronunciation Robustness（发音鲁棒性，通俗说就是碰到生僻词、文件路径、邮箱地址这类「照着念」的内容能不能念对）榜单上拿到 93.2%，超过 ElevenLabs 的 Eleven v4（91.7%）和 v4 Turbo（90.1%）。</p>
+    <p>它是个 35B 的 MoE（混合专家：把模型拆成很多 specialist 子网络，每个 token 只唤醒少数几个，用大模型的本事花小模型的钱）模型，每 token 只激活约 3B，支持 83 种语言，权重挂在 Hugging Face 上。真正好用的是两点：可以像给演员说戏一样下指令，方括号里写 [nervous, barely holding it together] 这种自然语言；以及词级修补——五分钟的有声书有一个字念错了，可以单独替换而不破坏前后情绪和节奏。API 每百万字符 15 美元，Eleven v4 是 80 美元。</p>
+    <p>需要留意的坑：许可证是 Fish Audio Community License，不是标准开源协议——年收入 50 万美元以下可免费商用，超过要谈；本地跑大约需要 39GB 显存。</p>
+    <p class="srcline"><b>原文：</b><a href="https://huggingnews.com/ai/fish-audio-drama-3-leads-all-tts-models-in-pronunciation-robustness-dc723bca">HuggingNews</a> · <a href="https://www.orcarouter.ai/blog/fish-audio-drama-3-tops-open-weights-speech-arena">OrcaRouter 价格与架构分析</a> · Artificial Analysis 榜单</p>
+  </div>
+</div>
+
+<!-- ==================== AI + 科研 ==================== -->
+<div class="section">
+  <div class="sec-head">AI + 科研</div>
+  <div class="sec-intro">一边是数学界还在吵架，一边是 arXiv 上有人试着让模型「少说话」。</div>
+
+  <div class="main-item">
+    <h2>OpenAI 一次放出 722 篇数学手稿，两天后自己撤回了 3 篇</h2>
+    <div class="meta"><span>语言：中／英</span><span>约 5 分钟</span><span>事件时点：10 月 6 日发布，10 月 14 日仍在密集讨论并出现首份修订日志</span></div>
+
+    <p>如果一个月前 OpenAI 宣布解出纳维—斯托克斯方程是「深度」，那这次是「广度」：OpenAI 在一个公开 GitHub 仓库里放出了 722 篇由内部前沿模型产出的数学手稿，归入 372 个「结果族」，覆盖数论、代数几何、理论计算机科学等 17 个方向。清单上的名字包括准黎曼猜想、四维挂谷猜想、唯一游戏猜想、有理数域上的希尔伯特第十问题——有的悬置了半个世纪以上。</p>
+
+    <p>流程是这样的：因为模型在既有数学评测上已经饱和，团队把评估扩展到了开放研究问题，前后投喂约 4,000 个问题，把输出按相关性归族、再按「足够重要」筛一遍，留下这 372 族。OpenAI 称绝大多数结果走同一套流程，平均每个结果消耗约相当于 3 小时 ChatGPT Pro 思考的算力——这是本次最值得记住的一个数字。另外有约六成的族附带了 Lean 形式化证明（Lean 是一种把数学证明写得足够精确、让计算机能逐步核对的语言和工具）。</p>
+
+    <p>为什么 10 月 14 日还在说这件事？因为 OpenAI 在发布两天后于仓库里放出了第一份成果更新日志：撤回 3 篇、修订 14 篇、13 篇更新了引用。撤稿原因是一处「符号错误」——它让一篇论文的论证失效，并连带影响两篇依赖其构造的论文。同一周，数学界的反弹也形成了：陶哲轩（Terence Tao）对《新科学家》用了「dumped」（倾倒）这个词形容这次发布方式；批评集中在模型不开源、成果未经同行评审，以及绕开 arXiv（OpenAI 的说法是 arXiv 有月度提交上限）。</p>
+
+    <p>笔者的判断：这 722 篇最终有多少被确认为正确、新颖且重要，要等数学界慢慢看，任何结论都还太早。但「平均 3 小时算力换一个候选结果」这件事本身，已经改变了研究经济学——它意味着提出候选证明不再是需要数月人力的稀缺活动，而校验和判断重要性变成了新的稀缺环节。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>跳过那些猜想的名字，去看那份更新日志。撤稿原因是这次发布里最诚实的部分——它说明这批成果目前的状态是「待核对的候选」，而不是「已解决」。</div>
+
+    <p class="srcline"><b>原文与梳理：</b><a href="https://thestudentnews.co.uk/2026/10/14/openai-floods-mathematics-with-hundreds-of-proofs">The Student News（含陶哲轩评论）</a> · <a href="https://techbonafide.com/openai-publishes-722-ai-generated-mathematics-manuscripts-from-internal-frontier-model">Tech Bonafide</a> · GitHub 上的 openai/math 仓库</p>
+  </div>
+
+  <div class="sub-item">
+    <h3>让 agent「在心里想」：HybridAgents 把推理成本砍掉六到七成</h3>
+    <div class="meta"><span>语言：英</span><span>约 2 分钟</span><span>证据：arXiv 预印本 + 代码与权重已公开</span><span>事件时点：10 月 13 日提交</span></div>
+    <p>arXiv 上一篇 10 月 13 日提交的预印本（编号 2610.18861，作者包含斯坦福与 Together AI 的研究者）提出 HybridAgents：让 agent 在两种模式间切换——「潜空间模式」下模型内部推理、不把思考解码成文字，「文字模式」只在调用工具或给最终答案时才输出。</p>
+    <p>在 Qwen3-Base 的 4B、8B、14B 三个规模、11 个基准上，报告称 token 用量降 35.5%—54.7%，推理快 1.8—2.6 倍，算力成本降到原来的约三分之一。潜空间推理不是黑箱，可以以可读的「伪文本」形式显示出来。同期还有一篇思路相近的 CLSR 论文，让多个 agent 自己发明一套紧凑符号语言来互相通信，报告称比标准思维链少 3—6 倍 token。</p>
+    <p>需要注意：都是未同行评审的预印本，且只验证了中小规模模型。笔者认为最大的问号在可解释性——「伪文本」不是模型的真实思维链，在医疗这类受监管领域，它能承担多少信任，是有待回答的问题。</p>
+    <p class="srcline"><b>原文：</b><a href="https://arxiv.org/abs/2610.18861">arXiv:2610.18861</a> · GitHub 上的 togethercomputer/HybridAgent</p>
+  </div>
+</div>
+
+<!-- ==================== AI + 游戏 ==================== -->
+<div class="section">
+  <div class="sec-head">AI + 游戏</div>
+  <div class="sec-intro">游戏公司开始从「买插件」转向「买底层」。</div>
+
+  <div class="main-item">
+    <h2>库洛 2 亿元入股一家不到十人的 AI 语音公司</h2>
+    <div class="meta"><span>语言：中</span><span>约 4 分钟</span><span>证据：工商变更登记 + 南都 10 月 14 日披露</span><span>事件时点：10 月 13 日完成登记</span></div>
+
+    <p>《战双帕弥什》《鸣潮》的开发商库洛，已于 10 月 13 日完成工商变更登记、14 日被媒体披露：以 15% 持股入股深圳言之域科技，对应估值约 2 亿元，是本轮唯一新增投资方，库洛创始人刘胜出任董事。这是这家二次元厂商首次公开投资 AI 公司。</p>
+
+    <p>言之域创始人谢伟铎生于 2002 年，巴黎大学计算机系休学回国创业。起因挺朴素：他做的 AI 虚拟主播「木几萌」，外形、人设、交互逻辑都打磨完了，卡在声音上——市面方案的机械感他不满意，于是自己训语音模型。公司两条产品线：Vocu 悟声（3 秒样本克隆音色，最新内测可用文本指令控制语气、笑场等演绎细节）和元语 TalkiVerse（文本、语音、3D 动作表情端到端同步生成）。团队规模据报道不足十人。</p>
+
+    <p>为什么游戏公司会投这个？库洛的核心资产是角色和世界观，而「说话、表演、交互」正好是角色表现力的三个环节。有行业观点认为，考虑到库洛已是腾讯控股子公司，这更像腾讯借一家二次元厂商的视角下注 AI。行业背景也对得上：伽马数据显示 2026 年上半年国内游戏 TOP50 企业的 AI 投资达 108 宗，已超 2025 年全年，AI 项目占同期游戏行业投融资七成以上，且投资重心正从通用大模型转向语音、3D 生成这些垂直赛道。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>重点看那句「从采购第三方插件转向押注底层技术」。这不是一次财务投资，是二游厂商今年共同的转向——当 AI 能力开始决定角色表现力，它就不再是外包项了。</div>
+
+    <p class="srcline"><b>原文：</b><a href="https://www.nfnews.com/content/xovKvvQMyJ.html">南方都市报（南方+）</a> · <a href="https://news.qq.com/rain/a/20261014A0EE7P00">GameLook 分析</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>AI NPC 的竞争点，从「能聊天」变成了「记得住」</h3>
+    <div class="meta"><span>语言：中</span><span>约 2 分钟</span><span>事件时点：10 月 14 日公开</span></div>
+    <p>10 月 14 日游族 AI 红岸实验室公开了他们的 NPC 架构：感知、记忆、目标、决策、行动五步。其中记忆被拆成四层——短期（当前和玩家的对话、临时信息）、长期（重要经验与游戏历史事件）、人物（记住 NPC 跟这个玩家的关系和自身性格）、世界（游戏规则、地形、社会信息）。</p>
+    <p>关键的工程边界在于：决策大模型只做开放性决策（理解玩家意图、生成多套方案、动态调整策略），而伤害数值、剧情逻辑、平衡性这些确定性规则仍然交给游戏引擎。用他们的话说，「大模型不是控制一切，而是和引擎协同，确保世界规则不被破坏」。米哈游在《星布谷地》里给所有 AI NPC 搭了同一套 Agent 架构，并专门研发了「超智记忆系统」。</p>
+    <p>笔者的观察：两家不约而同把宝押在「记忆」上，说明行业已经承认——NPC 像不像人，瓶颈不在对话质量，而在连续性。一次对话惊艳很容易，隔三天还记得你抢过他东西，很难。</p>
+    <p class="srcline"><b>原文：</b><a href="https://new.qq.com/rain/a/20261014A0024900">游族 AI 红岸实验室访谈</a> · GameLook（米哈游部分）</p>
+  </div>
+</div>
+
+<!-- ==================== AI + 教育 ==================== -->
+<div class="section">
+  <div class="sec-head">AI + 教育</div>
+  <div class="sec-intro">今天两份材料说的是同一件事：作业变好了，不等于学会了。</div>
+
+  <div class="main-item">
+    <h2>「学习惩罚」：26,811 名学生的 30 个月，作业越漂亮，考试越难看</h2>
+    <div class="meta"><span>语言：中</span><span>约 4 分钟</span><span>证据：多家媒体同日集中转述（见文内证据等级说明）</span><span>爆火时点：10 月 14 日</span></div>
+
+    <p>作业写得又快又好，考试成绩反而掉了——这个反差是 10 月 14 日中文互联网上流传最广的一条 AI 教育新闻。香港大学经济学教授吴延晖与斯德哥尔摩大学 David Strömberg 等人的研究，追踪了中国中部某县 9 所中学 26,811 名初高中生、跨度 30 个月的学业记录做回溯分析，提出「学习惩罚」这个概念。</p>
+
+    <figure>
+      <svg viewBox="0 0 660 176" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="学习惩罚四项指标对比图">
+        <text x="0" y="16" font-family="SimSun, serif" font-size="13" fill="#1a1a1a" font-weight="700">正向只有一条，其余全是考试</text>
+        <text x="0" y="34" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#6b6b6b">使用 AI 后各项指标的变化幅度（研究团队口径，未经同行评审）</text>
+        <!-- center axis -->
+        <line x1="330" y1="48" x2="330" y2="158" stroke="#c9c3b6" stroke-width="0.8"/>
+        <!-- 作业分数 +18 -->
+        <text x="0" y="66" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#2b2b2b">作业分数</text>
+        <rect x="330" y="56" width="90" height="14" fill="#2b2b2b"/>
+        <text x="428" y="67" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#2b2b2b" font-weight="700">+18%</text>
+        <!-- 月考 -20 -->
+        <text x="0" y="93" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#2b2b2b">月考成绩（6 个月内）</text>
+        <rect x="230" y="83" width="100" height="14" fill="#b03a2e"/>
+        <text x="150" y="94" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#b03a2e" font-weight="700">−20%</text>
+        <!-- 中考 -24 -->
+        <text x="0" y="120" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#2b2b2b">中考成绩（两年后）</text>
+        <rect x="210" y="110" width="120" height="14" fill="#b03a2e"/>
+        <text x="130" y="121" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#b03a2e" font-weight="700">−24%</text>
+        <!-- 高考 -18 -->
+        <text x="0" y="147" font-family="Microsoft YaHei, sans-serif" font-size="10.5" fill="#2b2b2b">高考成绩（两年后）</text>
+        <rect x="240" y="137" width="90" height="14" fill="#b03a2e"/>
+        <text x="160" y="148" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#b03a2e" font-weight="700">−18%</text>
+        <text x="330" y="172" font-family="Microsoft YaHei, sans-serif" font-size="9" fill="#6b6b6b">左：下降　│　右：上升</text>
+      </svg>
+      <figcaption><b>该看什么：</b>唯一向上的那一条是「作业」。研究给出的机制不复杂：作业是 AI 做的，AI 九成正确率，作业就是九十分；但闭卷考场上 AI 不在身边，真实水平就暴露了。⚠ 本图为媒体转述数据，未取回论文原文。</figcaption>
+    </figure>
+
+    <p>研究还观察到剂量效应：AI 使用率越高的学生，成绩下滑越明显，而样本截止时该县学生的 AI 使用率已达 80% 左右，接近欧美水平。团队也给出一个安慰性的发现——如果学生保持同等思考投入，只把 AI 当提示工具，受损程度会明显减轻。吴延晖的说法是「学习需要必要的摩擦」：AI 直接抹平了思考中的卡顿和试错，留下看似顺滑、实则残缺的思维。他同时提醒，AI 平权不会自动实现——管控 AI 使用需要教师和家长的软性管理资源，城乡之间这类资源的差距，反而可能让 AI 普及扩大教育鸿沟。</p>
+
+    <p><b>必须标注证据等级：</b>本条目前依据的是媒体转述（羊城派、新浪、今日头条等 10 月 14 日集中报道），我们未检索到论文原文，也未找到港大或世界银行的机构发布稿；报道中「世界银行连夜撤回教育年度报告」一节同样只见转述。方向值得重视，具体数值请等待原文。</p>
+
+    <div class="whyread"><b>为什么值得读：</b>先记住这个反差本身，别急着记数字。它解释了为什么「用 AI 之后作业全对」不能当作学会了的证据——以及为什么先自己做、再拿 AI 对答案，和直接问 AI 要答案，是两件完全不同的事。</div>
+
+    <p class="srcline"><b>转述来源：</b><a href="https://k.sina.cn/article_5787187353_158f17899020029rbc.html">羊城派（含研究者自述）</a> · <a href="http://www.sina.cn/news/detail/5352475540588228.html">新浪新闻</a></p>
+  </div>
+
+  <div class="sub-item">
+    <h3>同一天，澳大利亚官方研究机构给出了更保守的版本</h3>
+    <div class="meta"><span>语言：英</span><span>约 2 分钟</span><span>证据：国家级机构正式建议 + ABC 当日报道</span><span>事件时点：10 月 14 日</span></div>
+    <p>就在同一天，澳大利亚教育研究组织（AERO，由澳联邦与各州政府联合资助的国家级教育研究机构）发布了给教师、校方与决策者的建议，ABC News 当天报道。梳理了澳内外研究之后，AERO 的立场是：小学前三年完全避免 AI；之后也要与明示教学这类成熟教法配合使用；家长不要让孩子在家里「无限制」使用 ChatGPT。</p>
+    <p>AERO 首席执行官 Jenny Donovan 用了「认知外包」（cognitive outsourcing）这个词，并指出海外研究显示，用 AI 完成作业的学生在考试中被剥夺工具后无法复现自己的成绩——这与上面那条研究的机制描述是一致的。两条消息彼此独立、来源不同，可以作为交叉印证来看；但一份是媒体转述的研究，一份是官方机构的正式立场，可信度并不在同一个层级上。</p>
+    <p class="srcline"><b>原文：</b><a href="https://www.abc.net.au/news/2026-10-14/ai-in-schools-warning-affecting-long-term-learning/107263444">ABC News（澳大利亚）</a></p>
+  </div>
+</div>
+
+<!-- ==================== 页脚 ==================== -->
+<div class="footer">
+  <h4>检索截止与信息缺口</h4>
+  <ul>
+    <li><b>检索截止时间：</b>2026 年 10 月 15 日 09:40（GMT+8）。收录窗口为 10 月 14 日全天及 10 月 13 日晚间。</li>
+    <li>Anthropic Scion 的原文发布在该公司工程博客，本次未直接取回原页，正文依据多家技术解读转述，数字以转述为准。</li>
+    <li>港大「学习惩罚」研究未取回论文原文与机构发布稿，「世界银行撤回年度报告」一节仅见媒体转述，数值请勿直接引用。</li>
+    <li>GitHub 日榜 star 数为快照值，各来源采集时点不同（本次以 10 月 14 日 13:15 北京时间快照为主），不同来源间存在数千星出入。</li>
+    <li>本期涉及的多数模型性能数据均为厂商自述，未见独立第三方复现；Gemini 4 Argon 一节已尽量标注可自行核验的公开仓库改动。</li>
+    <li>中文来源以媒体与聚合站为主，部分事件的一手英文原稿未能取回稳定直链，已在各条来源行中注明。</li>
+  </ul>
+  <div style="text-align:center; color:#6b6b6b; font-size:8.5pt; letter-spacing:1px; border-top:0.5px solid #ddd7cb; padding-top:2.5mm;">
+    昨日 AI 重点资讯 · 第 002 期 · 二〇二六年十月十五日
+  </div>
+</div>
+
+</body>
+</html>

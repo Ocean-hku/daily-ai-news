@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>{{TITLE}}</title>
+<style>
+  @page { size: A4; margin: 18mm 19mm 18mm 19mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #faf8f4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { color: #2b2b2b; font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", sans-serif; font-size: 11pt; line-height: 1.8; }
+  a { color: #8d2d25; text-decoration: none; border-bottom: 0.5px solid #d7aaa4; }
+  .masthead { text-align: center; padding: 0 0 10px 0; }
+  .masthead h1 { font-family: "SimSun", "Source Han Serif SC", "Songti SC", serif; font-size: 33pt; font-weight: 700; letter-spacing: 0.22em; text-indent: 0.22em; color: #1a1a1a; margin: 0 0 9px 0; line-height: 1.25; }
+  .subline { font-size: 9.5pt; color: #6b6b6b; letter-spacing: 0.08em; margin: 0 0 8px 0; }
+  .rule-double { border-top: 2.5px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; height: 3px; margin: 0 0 4px 0; }
+  .section { margin: 26px 0 0 0; }
+  .section-tag { display: inline-block; background: #b03a2e; color: #fff; font-family: "SimSun", "Source Han Serif SC", serif; font-size: 12.5pt; font-weight: 700; letter-spacing: 0.14em; text-indent: 0.14em; padding: 5px 16px; margin: 0 0 7px 0; break-after: avoid; }
+  .section-lead { font-size: 10pt; color: #6b6b6b; font-style: italic; margin: 0 0 14px 0; padding-left: 2px; break-after: avoid; }
+  .item { margin: 0 0 16px 0; padding: 0 0 14px 0; border-bottom: 0.6px solid #d6d1c6; }
+  .item:last-child { border-bottom: none; }
+  h2.mainhead { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 16pt; font-weight: 700; color: #1a1a1a; line-height: 1.45; margin: 0 0 8px 0; break-after: avoid; }
+  h3.subhead { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 12.5pt; color: #1a1a1a; line-height: 1.5; margin: 0 0 5px 0; break-after: avoid; }
+  .meta { color: #777064; font-size: 9pt; margin: 0 0 7px 0; }
+  .dot { padding: 0 5px; color: #b9b3a8; }
+  p { margin: 0 0 8px 0; text-align: justify; }
+  .why { margin: 8px 0 10px 0; padding: 6px 10px 6px 11px; border-left: 3px solid #b03a2e; background: rgba(176, 58, 46, 0.06); color: #333; font-size: 10pt; break-inside: avoid; }
+  .badge { display: inline-block; vertical-align: 0.12em; margin-left: 7px; padding: 1px 6px; border-radius: 999px; border: 1px solid #b03a2e; color: #b03a2e; font-family: "Microsoft YaHei", sans-serif; font-size: 8.5pt; font-weight: 700; letter-spacing: 0.04em; }
+  figure { margin: 11px 0 12px 0; padding: 9px 10px; border: 0.6px solid #ded8cc; background: #fffdf8; break-inside: avoid; }
+  figure svg { display: block; width: 100%; height: auto; }
+  figcaption { margin-top: 6px; color: #6b6b6b; font-size: 8.8pt; text-align: center; }
+  .footer { margin-top: 28px; padding-top: 11px; border-top: 1px solid #cfc8bd; color: #5f5a52; font-size: 9pt; }
+  .footer h4 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 11pt; margin: 0 0 5px 0; color: #1a1a1a; }
+  .footer ul { margin: 4px 0 0 18px; padding: 0; }
+  .footer li { margin: 0 0 3px 0; }
+  .print-mark { text-align: center; color: #6b6b6b; font-size: 8.5pt; letter-spacing: 1px; border-top: 0.5px solid #ddd7cb; padding-top: 8px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <h1>昨日 AI 重点资讯</h1>
+  <div class="subline">{{SUBLINE}}</div>
+  <div class="rule-double"></div>
+</header>
+
+{{SECTIONS}}
+
+<footer class="footer">
+  <h4>检索截止时间</h4>
+  <p>{{DEADLINE}}</p>
+  <h4>会影响阅读判断的信息缺口</h4>
+  <ul>
+{{GAPS}}
+  </ul>
+  <div class="print-mark">昨日 AI 重点资讯 · 第 {{ISSUE_ZH}} 期 · {{DATE_ZH}}</div>
+</footer>
+</body>
+</html>

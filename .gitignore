@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# WorkBuddy / IDE local state
+.workbuddy/
+.codebuddy/
+
+# Runtime artifacts
+runtime/
+logs/
+reports/
+
+# Local planning / generated analysis notes
+每日AI新闻项目优化方向分析.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+
+# Browser/PDF temporary files
+*.crdownload

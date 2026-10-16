@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>每日 AI 新闻看板</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #faf8f4; color: #242424; font-family: "Microsoft YaHei", "Source Han Sans SC", sans-serif; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 36px 22px 54px; }
+  header { border-top: 3px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 22px 0 18px; margin-bottom: 24px; text-align: center; }
+  h1 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 34px; letter-spacing: .18em; text-indent: .18em; margin: 0 0 8px; }
+  .sub { color: #6b6b6b; font-size: 14px; }
+  .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0 24px; }
+  .summary div { background: #fffdf8; border: 1px solid #e2dbcf; padding: 14px 16px; }
+  .summary b { display: block; font-size: 22px; margin-bottom: 4px; }
+  .summary span { color: #6b6b6b; font-size: 13px; }
+  .card { background: #fffdf8; border: 1px solid #ded8cc; box-shadow: 0 8px 24px rgba(35, 31, 27, .06); padding: 18px 20px; margin: 0 0 16px; }
+  .card-head { display: flex; gap: 16px; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e8e1d6; padding-bottom: 12px; }
+  h2 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 23px; margin: 0 0 4px; }
+  .card-head p { margin: 0; color: #8d2d25; font-weight: 700; }
+  h3 { font-family: "SimSun", "Source Han Serif SC", serif; font-size: 20px; margin: 16px 0 10px; line-height: 1.45; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .btn { display: inline-block; color: #fff; background: #b03a2e; text-decoration: none; padding: 7px 12px; border-radius: 999px; font-size: 13px; }
+  .btn.disabled { color: #8b8378; background: #eee7dc; }
+  .meta { display: flex; flex-wrap: wrap; gap: 9px; color: #6b6b6b; font-size: 13px; margin-bottom: 12px; }
+  .meta span { border-left: 3px solid #c9bfb1; padding-left: 8px; }
+  .counts { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0; }
+  .pill { display: inline-block; border: 1px solid #d8cfc2; background: #faf6ed; color: #403b35; padding: 4px 9px; border-radius: 999px; font-size: 12px; }
+  .badge-line { margin-top: 8px; padding: 8px 10px; background: rgba(176, 58, 46, .06); border-left: 3px solid #b03a2e; font-size: 13px; }
+  .muted { color: #8b8378; font-size: 13px; }
+  footer { margin-top: 26px; color: #777064; font-size: 12px; text-align: center; }
+  @media (max-width: 720px) { .summary { grid-template-columns: 1fr; } .card-head { display: block; } .links { justify-content: flex-start; margin-top: 12px; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>每日 AI 新闻看板</h1>
+    <div class="sub">本地静态索引 · 直接点击打开 HTML/PDF · 无需本地服务器</div>
+  </header>
+  <div class="summary">
+    <div><b>3</b><span>已归档期数</span></div>
+    <div><b>2026-10-16</b><span>最新日期</span></div>
+    <div><b>2026-10-16 11:59:29</b><span>看板更新时间</span></div>
+  </div>
+  <section class="card">
+  <div class="card-head">
+    <div>
+      <h2>2026-10-16</h2>
+      <p>第 003 期</p>
+    </div>
+    <div class="links">
+      <a class="btn" href="2026-10/AI日报-2026-10-16.html">打开 HTML</a>
+<a class="btn" href="2026-10/AI日报-2026-10-16.pdf">打开 PDF</a>
+    </div>
+  </div>
+  <h3>420 余名科学家联名公开信：给具备网络操作能力的 AI 模型默认物理断网</h3>
+  <div class="meta">
+    <span>收录 17 条</span>
+    <span>剔除 0 条</span>
+    <span>10 页</span>
+    <span>1020 KB</span>
+  </div>
+  <div class="counts"><span class="pill">政策与产业×4</span><span class="pill">大模型与产品×3</span><span class="pill">实用 AI×2</span><span class="pill">新鲜玩法×2</span><span class="pill">AI+科研×2</span><span class="pill">AI+游戏×2</span><span class="pill">AI+教育×2</span></div>
+  <div class="badge-line"><b>再度爆火：</b>《80 亿分之 1》人生模拟器（再度爆火：10/5 上线日韩爆火，本周进中文圈并加繁中）</div>
+</section>
+
+<section class="card">
+  <div class="card-head">
+    <div>
+      <h2>2026-10-15</h2>
+      <p>第 002 期</p>
+    </div>
+    <div class="links">
+      <a class="btn" href="2026-10/AI日报-2026-10-15.html">打开 HTML</a>
+<a class="btn" href="2026-10/AI日报-2026-10-15.pdf">打开 PDF</a>
+    </div>
+  </div>
+  <h3>小模型可能很快就会自己「搬家」，Anthropic 红队给出时间表</h3>
+  <div class="meta">
+    <span>收录 16 条</span>
+    <span>剔除 1 条</span>
+    <span>12 页</span>
+    <span>1054 KB</span>
+  </div>
+  <div class="counts"><span class="pill">政策与产业×2</span><span class="pill">大模型与产品×2</span><span class="pill">实用 AI×3</span><span class="pill">新鲜玩法×3</span><span class="pill">AI+科研×2</span><span class="pill">AI+游戏×2</span><span class="pill">AI+教育×2</span></div>
+  
+</section>
+
+<section class="card">
+  <div class="card-head">
+    <div>
+      <h2>2026-10-14</h2>
+      <p>第 001 期</p>
+    </div>
+    <div class="links">
+      <span class="btn disabled">HTML 缺失</span>
+<a class="btn" href="2026-10/AI日报-2026-10-14.pdf">打开 PDF</a>
+    </div>
+  </div>
+  <h3>AI 自主解出 9 个悬置数十年的数学难题，这次走了同行评审（DeepMind AlphaProof Nexus 登上 Science）</h3>
+  <div class="meta">
+    <span>收录 10 条</span>
+    <span>剔除 1 条</span>
+    <span>2 页</span>
+    <span>193 KB</span>
+  </div>
+  <div class="counts"><span class="pill">AI+科研×1</span><span class="pill">AI+游戏×1</span><span class="pill">AI 安全×1</span><span class="pill">大模型发布×1</span><span class="pill">自研芯片×1</span><span class="pill">实用 AI×1</span><span class="pill">实证研究×1</span><span class="pill">代码 agent 评测×1</span><span class="pill">推理成本×1</span><span class="pill">训练框架×1</span></div>
+  
+</section>
+  <footer>文件位置：outputs/index.html。链接均为相对路径，双击本文件即可本地浏览。</footer>
+</div>
+</body>
+</html>
